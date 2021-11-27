@@ -1,0 +1,107 @@
+<table style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <td *ngIf="clientDetails">{{clientDetails.fullName}}</td>
+  </tr>
+  <tr>
+    <th>Pan:</th>
+    <td *ngIf="clientDetails">{{clientDetails.pan}}</td>
+  </tr>
+  <tr>
+    <th>Gender:</th>
+    <td *ngIf="clientDetails">{{clientDetails.gender}}</td>
+  </tr>
+  <tr>
+    <th>Date Of Birth:</th>
+    <td *ngIf="clientDetails">{{clientDetails.dateOfBirth}}</td>
+  </tr>
+  <tr>
+    <th>Address:</th>
+    <td>
+      <table>
+        <tr>
+          <td *ngIf="clientDetails && clientDetails.address">{{clientDetails.address.address1}}</td>
+        </tr>
+        <tr>
+          <td *ngIf="clientDetails && clientDetails.address">{{clientDetails.address.address2}}</td>
+        </tr>
+        <tr>
+          <td *ngIf="clientDetails && clientDetails.address">{{clientDetails.address.address3}}</td>
+        </tr>
+        <tr>
+          <td *ngIf="clientDetails && clientDetails.address">{{clientDetails.address.city}},&nbsp;{{clientDetails.address.state}}</td>
+        </tr>
+        <tr>
+          <td *ngIf="clientDetails && clientDetails.address">{{clientDetails.address.pinCode}},&nbsp;{{clientDetails.address.country}}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th>Mobile 1:</th>
+    <td *ngIf="clientDetails">{{clientDetails.countryCode1}}{{clientDetails.mobile1}}</td>
+  </tr>
+  <tr>
+    <th>Mobile 2:</th>
+    <td *ngIf="clientDetails">{{clientDetails.countryCode2}}{{clientDetails.mobile2}}</td>
+  </tr>
+  <tr>
+    <th>Residence Number:</th>
+    <td *ngIf="clientDetails">{{clientDetails.residenceNumber}}</td>
+  </tr>
+  <tr>
+    <th>Office Number:</th>
+    <td *ngIf="clientDetails">{{clientDetails.officeNumber}}</td>
+  </tr>
+  <tr>
+    <th>Email 1:</th>
+    <td *ngIf="clientDetails">{{clientDetails.emailAddress1 | lowercase }}</td>
+  </tr>
+  <tr>
+    <th>Email 2:</th>
+    <td *ngIf="clientDetails">{{clientDetails.emailAddress2 | lowercase }}</td>
+  </tr>
+  <tr>
+    <th>Occupation:</th>
+    <td *ngIf="clientDetails">{{clientDetails.occupation}}</td>
+  </tr>
+  <tr>
+    <th>Place of Birth:</th>
+    <td *ngIf="clientDetails">{{clientDetails.placeOfBirth}}</td>
+  </tr>
+  <tr>
+    <th>Overseas Address:</th>
+    <td>
+      <table>
+        <tr>
+          <td *ngIf="clientDetails && clientDetails.overseasAddress">{{clientDetails.overseasAddress.address1}}</td>
+        </tr>
+        <tr>
+          <td *ngIf="clientDetails && clientDetails.overseasAddress">{{clientDetails.overseasAddress.address2}}</td>
+        </tr>
+        <tr>
+          <td *ngIf="clientDetails && clientDetails.overseasAddress">{{clientDetails.overseasAddress.address3}}</td>
+        </tr>
+        <tr>
+          <td *ngIf="clientDetails && clientDetails.overseasAddress">{{clientDetails.overseasAddress.city}},&nbsp;{{clientDetails.overseasAddress.state}}</td>
+        </tr>
+        <tr>
+          <td *ngIf="clientDetails && clientDetails.overseasAddress">{{clientDetails.overseasAddress.pinCode}},&nbsp;{{clientDetails.overseasAddress.country}}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th>Fathers's Name:</th>
+    <td *ngIf="clientDetails">{{clientDetails.fathersName}}</td>
+  </tr>
+  <tr>
+    <th>Mother's Name:</th>
+    <td *ngIf="clientDetails">{{clientDetails.mothersName}}</td>
+  </tr>
+  <tr>
+    <th>Spouse's Name:</th>
+    <td *ngIf="clientDetails">{{clientDetails.spouseName}}</td>
+  </tr>
+
+</table>

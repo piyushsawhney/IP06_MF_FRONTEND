@@ -1,0 +1,16 @@
+<ng-template #rt let-r="result" let-t="term">
+  <ngb-highlight [result]="r.clientName" [term]="t"></ngb-highlight>
+  <div>PAN: {{r.clientPan}}</div>
+</ng-template>
+
+<div class="form-group">
+  <input id="ClientName" type="text"
+         class="form-control"                     
+         [(ngModel)]="clients"
+         (selectItem)="selectedClient($event)"
+         [ngbTypeahead]="search"                     
+         [resultTemplate]="rt"
+         [inputFormatter]="inputFormatBandListValue"
+         #instance="ngbTypeahead"                     
+    />
+</div>
